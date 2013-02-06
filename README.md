@@ -1,4 +1,4 @@
 real-time-congress-node
 =======================
 
-A `node.js` wrapped for the `Real Time Congress` API
+A `node.js` wrapper for the `Real Time Congress` API
