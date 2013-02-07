@@ -11,4 +11,4 @@ var success = function(data){
 
 sca.init(config.apikey);
 
-sca.votes().filter("year", "2012").call(success);
+sca.votes().filter("year", "2012").page(1, 1).order("voted_at", "asc").call(success);
