@@ -1,7 +1,12 @@
 # Sunlight Congress API Wrapper
 
-
 A `node.js` wrapper for the [Sunlight Congress API](http://sunlightlabs.github.com/congress/) from [Sunlight Labs](http://sunlightlabs.com/).
+
+# Installing
+
+
+	npm install sunlight-congress-api
+
 
 ## Usage
 
