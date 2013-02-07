@@ -1,8 +1,8 @@
 {
-  "name": "real-time-congress",
+  "name": "sunlight-congress-api",
   "version": "0.0.1",
   "author": "Matthew Chase Whittemore <mcwhittemore@gmail.com>",
-  "description": "A simple wrapper for Real Time Congress API from SunlightLabs",
+  "description": "A simple wrapper for Sunlight Congress API from SunlightLabs",
   "contributors": [ 
     {
       "name": "Matthew Chase Whittemore",
@@ -12,7 +12,7 @@
   "main": "./lib/main",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mcwhittemore/real-time-congress-node.git"
+    "url": "https://github.com/mcwhittemore/sunlight-congress-api.git"
   },
   "keywords": [
     "api",

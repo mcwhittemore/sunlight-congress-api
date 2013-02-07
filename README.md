@@ -1,20 +1,16 @@
-# Real Time Congress Wrapper
+# Sunlight Congress API Wrapper
 
 
-A `node.js` wrapper for the [Real Time Congress API](http://services.sunlightlabs.com/docs/Real_Time_Congress_API/) from [Sunlight Labs](http://sunlightlabs.com/).
+A `node.js` wrapper for the [Sunlight Congress API](http://sunlightlabs.github.com/congress/) from [Sunlight Labs](http://sunlightlabs.com/).
 
 ## Usage
 
-	var rtc = require("../lib/main");
+	var sca = require("../lib/main");
 
 	var success = function(data){
 		console.log(data);
 	}
 
-	rtc.init("APIKEYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY");
+	sca.init("APIKEYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY");
 
-	rtc.votes().filter("year", "2012").call(success);
-
-## Main Ideas
-
-The Real Time Congress APU (RTCA) is divided up into 
+	sca.votes().filter("year", "2012").call(success);

@@ -1,9 +1,9 @@
-var rtc = require("../lib/main");
+var sca = require("../lib/main");
 
 var success = function(data){
 	console.log(data);
 }
 
-rtc.init("APIKEYYYYYYYYYYYYYYYYYYYYYY");
+sca.init("APIKEYYYYYYYYYYYYYYYYYYYYYY");
 
-rtc.votes().filter("year", "2012").call(success);
+sca.votes().filter("year", "2012").call(success);
