@@ -2,7 +2,7 @@
   "name": "real-time-congress",
   "version": "0.0.1",
   "author": "Matthew Chase Whittemore <mcwhittemore@gmail.com>",
-  "description": "a simple wrapper for Real Time Congress API from SunlightLabs",
+  "description": "A simple wrapper for Real Time Congress API from SunlightLabs",
   "contributors": [ 
     {
       "name": "Matthew Chase Whittemore",

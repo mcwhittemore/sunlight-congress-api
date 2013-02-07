@@ -1,9 +1,9 @@
 var rtc = require("../lib/main");
 
-var good = function(data){
+var success = function(data){
 	console.log(data);
 }
 
-rtc.init("APIKEYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY");
+rtc.init("APIKEYYYYYYYYYYYYYYYYYYYYYY");
 
-rtc.votes().filter("year", "2012").call(good);
+rtc.votes().filter("year", "2012").call(success);
