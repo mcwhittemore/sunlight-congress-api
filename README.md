@@ -47,6 +47,8 @@ There are currently 10 endpoints to the SCApi.
 
 Adds query parmeter to quests. Allows for chaining.
 
+	sca.votes().filter("year", "2012"); //get all votes with year 2012
+
 * field: this is the field you want to filter on.
 * value: the value the field must eval to, to be returned.
 * operator: how to perform the eval. Defaults to =.
@@ -60,6 +62,37 @@ Adds query parmeter to quests. Allows for chaining.
 	* in - the field is a string that is one of these values (separated by "|")
 	* nin - the field is a string that is not one of these values (separated by "|")
 	* exists - the field is both present and non-null (supply "true" or "false")
+
+#### page(pagenumber, [pagesize])
+
+Provides control over the pages SCApi returns to you.
+
+	sca.votes().page(2, 5); //return page 2 of votes where the pagesize is 5 items.
+
+* pagenumber: which page to have returned.
+* pagesize: how many items to return on a page. Defaults to 20. Max is 50.
+
+#### fields(field1, field2, ..., fieldN)
+
+Provides control over which fields to have SCApi return to you. This is very helpful, as the API returns default fields only if this is not used.
+
+This function takes any number of arguments. Each argument will be added the request string.
+
+	sca.votes().fields("year", "chamber") //returns the YEAR and CHAMBER fields from votes
+
+#### order(field, [direction])
+
+Provides control over the ordering of results. This is vital to pagination returns. 
+
+	sca.votes().order("year", "desc"); //orders the result of votes by year from newest to oldest
+
+If you want to multiorder a call, use the order function twice.
+
+	//orders the results by chamber from a to z and then by year from newest to oldest.
+	sca.votes().order("chamber", "asc").order("year");
+
+* field: which field to sort by.
+* direction: how to direct. Two options, desc and asc. Defaults to desc.
 
 #### call(success, [failure])
 
