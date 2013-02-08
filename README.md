@@ -1,6 +1,6 @@
 # Sunlight Congress API Wrapper
 
-A `node.js` wrapper for the [Sunlight Congress API](http://sunlightlabs.github.com/congress/) from [Sunlight Labs](http://sunlightlabs.com/).
+A `node.js` wrapper for the [Sunlight Congress API](http://sunlightlabs.github.com/congress/) from the [Sunlight Foundation](http://sunlightfoundation.com/).
 
 # Installing
 
@@ -10,15 +10,15 @@ A `node.js` wrapper for the [Sunlight Congress API](http://sunlightlabs.github.c
 
 ## Usage
 
-	var sca = require("../lib/main");
+	var api = require("sunlight-congress-api");
 
 	var success = function(data){
 		console.log(data);
 	}
 
-	sca.init("APIKEYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY");
+	api.init("APIKEYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY");
 
-	sca.votes().filter("year", "2012").call(success);
+	api.votes().filter("year", "2012").call(success);
 
 ## Demo
 
@@ -28,26 +28,26 @@ A small demo is provided. After creating a config.js file, run `node run.js` in 
 
 ### Endpoints
 
-There are currently 10 endpoints to the SCApi.
+There are currently 10 endpoints to the Sunlight Congress API.
 
-* bills: `sca.bills()` provides info on legislation in the House and Senate, back to 2009. Updated daily.
-* bills/search: `sca.billsSearch()` does a full text search over legislation.
-* committees: `sca.committees()` lists current committees, subcommittees, and their membership.
-* districts/locate: `sca.districtsLocate()` finds congressional districts for a latitude/longitude or zip.
-* floor_updates: `sca.floorUpdates()` lists up-to-the-minute updates from the floor of the House and Senate.
-* hearings:	`sca.hearings()` lists committee hearings in Congress. Updated as hearings are announced.
-* legislators: `sca.legislators()` brings up current legislators' names, IDs, biography, and social media.
-* legislators/locate: `sca.leislatorsLocate()` finds representatives and senators for a latitude/longitude or zip.
-* upcoming_bills: `sca.upcomingBills()` lists bills scheduled for debate in the future, as announced by party leadership.
-* votes: `sca.votes()` provide access to roll call votes in Congress, back to 2009. Updated within minutes of votes.
+* bills: `bills()` provides info on legislation in the House and Senate, back to 2009. Updated daily.
+* bills/search: `billsSearch()` does a full text search over legislation.
+* committees: `committees()` lists current committees, subcommittees, and their membership.
+* districts/locate: `districtsLocate()` finds congressional districts for a latitude/longitude or zip.
+* floor_updates: `floorUpdates()` lists up-to-the-minute updates from the floor of the House and Senate.
+* hearings:	`hearings()` lists committee hearings in Congress. Updated as hearings are announced.
+* legislators: `legislators()` brings up current legislators' names, IDs, biography, and social media.
+* legislators/locate: `legislatorsLocate()` finds representatives and senators for a latitude/longitude or zip.
+* upcoming_bills: `upcomingBills()` lists bills scheduled for debate in the future, as announced by party leadership.
+* votes: `votes()` provide access to roll call votes in Congress, back to 2009. Updated within minutes of votes.
 
 ### Standard Calls
 
 #### filter(field, value, [operator])
 
-Adds query parmeter to quests. Allows for chaining.
+Adds query parameter to quests. Allows for chaining.
 
-	sca.votes().filter("year", "2012"); //get all votes with year 2012
+	api.votes().filter("year", "2012"); // get all votes with year 2012
 
 * field: this is the field you want to filter on.
 * value: the value the field must eval to, to be returned.
@@ -65,20 +65,20 @@ Adds query parmeter to quests. Allows for chaining.
 
 #### page(pagenumber, [pagesize])
 
-Provides control over the pages SCApi returns to you.
+Provides control over the pages Sunlight Congress API returns to you.
 
-	sca.votes().page(2, 5); //return page 2 of votes where the pagesize is 5 items.
+	api.votes().page(2, 5); //return page 2 of votes where the pagesize is 5 items.
 
 * pagenumber: which page to have returned.
 * pagesize: how many items to return on a page. Defaults to 20. Max is 50.
 
 #### fields(field1, field2, ..., fieldN)
 
-Provides control over which fields to have SCApi return to you. This is very helpful, as the API returns default fields only if this is not used.
+Provides control over which fields to have Sunlight Congress API return to you. This is very helpful, as the API returns default fields only if this is not used.
 
 This function takes any number of arguments. Each argument will be added the request string.
 
-	sca.votes().fields("year", "chamber") //returns the YEAR and CHAMBER fields from votes
+	api.votes().fields("year", "chamber") //returns the YEAR and CHAMBER fields from votes
 
 #### order(field, [direction]) 
 
@@ -87,20 +87,20 @@ Overloadeds options provided for objects and arrays, see below for examples.
 Provides control over the ordering of results. This is vital to pagination returns. 
 
 	//orders the result of votes by year from newest to oldest
-	sca.votes().order("year", "desc"); 
+	api.votes().order("year", "desc"); 
 
 * field: which field to sort by.
 * direction: how to direct. Two options, desc and asc. Defaults to desc.
 
-If you want to multiorder a call, use the order function twice or use one of the overloaded options.
+If you want to multi-order a call, use the order function twice or use one of the overloaded options.
 
 	//orders the results by chamber from a to z and then by year from newest to oldest.
-	sca.votes().order("chamber", "asc").order("year");
+	api.votes().order("chamber", "asc").order("year");
 
 	//add multiple at once with a single call
-	sca.votes().order(["year", "desc"], ["chamber", "desc"]);
-	sca.votes().order({field:"year", direction:"asc"}, {field:"chamber", direction:"asc"});
+	api.votes().order(["year", "desc"], ["chamber", "desc"]);
+	api.votes().order({field:"year", direction:"asc"}, {field:"chamber", direction:"asc"});
 
 #### call(success, [failure])
 
-Issues GET request to the API. Async calls success on success and failure on failure. If failure is not defined, a default console.log is used.
+Issues a GET request to the API. Async calls success on success and failure on failure. If failure is not defined, a default console.log is used.
