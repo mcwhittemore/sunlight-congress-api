@@ -80,19 +80,26 @@ This function takes any number of arguments. Each argument will be added the req
 
 	sca.votes().fields("year", "chamber") //returns the YEAR and CHAMBER fields from votes
 
-#### order(field, [direction])
+#### order(field, [direction]) 
+
+Overloadeds options provided for objects and arrays, see below for examples.
 
 Provides control over the ordering of results. This is vital to pagination returns. 
 
-	sca.votes().order("year", "desc"); //orders the result of votes by year from newest to oldest
+	//orders the result of votes by year from newest to oldest
+	sca.votes().order("year", "desc"); 
 
-If you want to multiorder a call, use the order function twice.
+* field: which field to sort by.
+* direction: how to direct. Two options, desc and asc. Defaults to desc.
+
+If you want to multiorder a call, use the order function twice or use one of the overloaded options.
 
 	//orders the results by chamber from a to z and then by year from newest to oldest.
 	sca.votes().order("chamber", "asc").order("year");
 
-* field: which field to sort by.
-* direction: how to direct. Two options, desc and asc. Defaults to desc.
+	//add multiple at once with a single call
+	sca.votes().order(["year", "desc"], ["chamber", "desc"]);
+	sca.votes().order({field:"year", direction:"asc"}, {field:"chamber", direction:"asc"});
 
 #### call(success, [failure])
 
