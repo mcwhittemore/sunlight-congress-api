@@ -61,7 +61,7 @@ base_search.filter("enacted_as.law_type", "public"); //filter results to bills t
 base_search.fields("official_title", "introduced_on", "last_vote_at", "summary");
 
 //CREATE A BILL SEARCH MODULE, DEFINED LIKE base_search, LIMITED TO BILLS ABOUT CHILD NUTRITION
-var nutritionBills = api.clone(base_search).search('"child nutrition"~10'); 
+var nutritionBills = api.clone(base_search).search('"child nutrition*"~d10'); 
 console.log(nutritionBills.getEndpoint());
 //nutritionBills.call(successNutrition);
 
