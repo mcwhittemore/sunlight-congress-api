@@ -1,4 +1,4 @@
-var sca = require("../lib/main");
+var api = require("../lib/main");
 var config = require("./config");
 
 if(config == undefined || config.apikey == undefined || config.apikey == ""){
@@ -9,12 +9,11 @@ var success = function(data){
 	console.log(data);
 }
 
-sca.init(config.apikey);
+api.init(config.apikey);
 
-sca.billsSearch().query("test");
+var bs = api.billsSearch().searchBase("test");
 
-
-sca.votes() // We are going to call the votes endpoint
+api.votes() // We are going to call the votes endpoint
 	.filter("year", "2012") //limit results to votes from 2012
 	.page(1, 20) //request the first page, with 10 results per page
 	.fields("chamber", "vote_type", "question") //set fields to select
