@@ -11,6 +11,9 @@ var success = function(data){
 
 sca.init(config.apikey);
 
+sca.billsSearch().query("test");
+
+
 sca.votes() // We are going to call the votes endpoint
 	.filter("year", "2012") //limit results to votes from 2012
 	.page(1, 20) //request the first page, with 10 results per page
