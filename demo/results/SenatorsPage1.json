@@ -1,0 +1,61 @@
+{
+    "results": [
+        {
+            "first_name": "William",
+            "gender": "M",
+            "last_name": "Cowan",
+            "middle_name": null,
+            "party": "D",
+            "state": "MA",
+            "state_rank": null,
+            "term_start": "2013-02-06"
+        },
+        {
+            "first_name": "Timothy",
+            "gender": "M",
+            "last_name": "Kaine",
+            "middle_name": null,
+            "party": "D",
+            "state": "VA",
+            "state_rank": "junior",
+            "term_start": "2013-01-03"
+        },
+        {
+            "first_name": "Ted",
+            "gender": "M",
+            "last_name": "Cruz",
+            "middle_name": null,
+            "party": "R",
+            "state": "TX",
+            "state_rank": "junior",
+            "term_start": "2013-01-03",
+            "twitter_id": "SenTedCruz"
+        },
+        {
+            "first_name": "Deb",
+            "gender": "F",
+            "last_name": "Fischer",
+            "middle_name": null,
+            "party": "R",
+            "state": "NE",
+            "state_rank": "junior",
+            "term_start": "2013-01-03"
+        },
+        {
+            "first_name": "Heidi",
+            "gender": "F",
+            "last_name": "Heitkamp",
+            "middle_name": null,
+            "party": "D",
+            "state": "ND",
+            "state_rank": "junior",
+            "term_start": "2013-01-03"
+        }
+    ],
+    "count": 100,
+    "page": {
+        "count": 5,
+        "per_page": 5,
+        "page": 1
+    }
+}
