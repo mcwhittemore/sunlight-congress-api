@@ -66,3 +66,9 @@ var senatorsPage2 = api.clone(senatorsPage1)
 senatorsPage1.call(buildSuccess("SENTORS PAGE 1"));
 // EXAMPLE RESPONSE: ./results/SenatorsPage2.json
 senatorsPage2.call(buildSuccess("SENTORS PAGE 2"));
+
+// TO STEP THROUGH A SET OF PAGES, USE NEXT.
+var committees = api.committees();
+for(var i=1; i<5; i++){
+	committees.next(buildSuccess("COMMITTEESS PAGE "+i));
+}
