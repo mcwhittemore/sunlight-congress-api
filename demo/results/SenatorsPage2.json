@@ -1,0 +1,64 @@
+{
+    "results": [
+        {
+            "first_name": "Angus",
+            "gender": "M",
+            "last_name": "King",
+            "middle_name": null,
+            "party": "I",
+            "state": "ME",
+            "state_rank": "junior",
+            "term_start": "2013-01-03",
+            "twitter_id": "SenAngusKing"
+        },
+        {
+            "first_name": "Elizabeth",
+            "gender": "F",
+            "last_name": "Warren",
+            "middle_name": null,
+            "party": "D",
+            "state": "MA",
+            "state_rank": "senior",
+            "term_start": "2013-01-03",
+            "twitter_id": "senwarren"
+        },
+        {
+            "first_name": "Brian",
+            "gender": "M",
+            "last_name": "Schatz",
+            "middle_name": "Emanuel",
+            "party": "D",
+            "state": "HI",
+            "state_rank": "senior",
+            "term_start": "2012-12-27"
+        },
+        {
+            "first_name": "Dean",
+            "gender": "M",
+            "last_name": "Heller",
+            "middle_name": null,
+            "party": "R",
+            "state": "NV",
+            "state_rank": "junior",
+            "term_start": "2013-01-03",
+            "twitter_id": "SenDeanHeller"
+        },
+        {
+            "first_name": "Ron",
+            "gender": "M",
+            "last_name": "Wyden",
+            "middle_name": null,
+            "party": "D",
+            "state": "OR",
+            "state_rank": "senior",
+            "term_start": "2011-01-05",
+            "twitter_id": "RonWyden"
+        }
+    ],
+    "count": 100,
+    "page": {
+        "count": 5,
+        "per_page": 5,
+        "page": 2
+    }
+}

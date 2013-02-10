@@ -1,0 +1,40 @@
+{
+    "results": [
+        {
+            "vote_type": "nomination",
+            "chamber": "senate",
+            "question": "On the Nomination PN468",
+            "voted_at": "2012-01-23T22:32:00Z"
+        },
+        {
+            "vote_type": "other",
+            "chamber": "senate",
+            "question": "On the Motion to Proceed H.J.Res. 98",
+            "voted_at": "2012-01-26T16:57:00Z"
+        },
+        {
+            "vote_type": "cloture",
+            "chamber": "senate",
+            "question": "On Cloture on the Motion to Proceed S. 2038",
+            "voted_at": "2012-01-30T22:32:00Z"
+        },
+        {
+            "vote_type": "other",
+            "chamber": "senate",
+            "question": "On the Amendment S.Amdt. 1484 to S.Amdt. 1470 to S. 2038 (Stop Trading on Congressional Knowledge Act of 2012)",
+            "voted_at": "2012-02-02T19:06:00Z"
+        },
+        {
+            "vote_type": "other",
+            "chamber": "senate",
+            "question": "On the Amendment S.Amdt. 1487 to S.Amdt. 1470 to S. 2038 (Stop Trading on Congressional Knowledge Act of 2012)",
+            "voted_at": "2012-02-02T19:33:00Z"
+        }
+    ],
+    "count": 909,
+    "page": {
+        "count": 5,
+        "per_page": 5,
+        "page": 1
+    }
+}

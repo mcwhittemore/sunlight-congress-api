@@ -1,0 +1,258 @@
+{
+    "query": "\"child nutrition\"~10",
+    "mapping": "bills",
+    "count": 14,
+    "elapsed": 0.020051661,
+    "request": {
+        "body": {
+            "sort": [
+                {
+                    "_score": "desc"
+                }
+            ],
+            "fields": [
+                "official_title",
+                "introduced_on",
+                "last_vote_at",
+                "bill_id"
+            ],
+            "query": {
+                "filtered": {
+                    "filter": {
+                        "and": {
+                            "filters": [
+                                {
+                                    "range": {
+                                        "introduced_on": {
+                                            "lte": "2012-12-31"
+                                        }
+                                    }
+                                },
+                                {
+                                    "query": {
+                                        "text": {
+                                            "enacted_as.law_type": {
+                                                "query": "public",
+                                                "type": "phrase"
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "_cache": true
+                        }
+                    },
+                    "query": {
+                        "query_string": {
+                            "query": "\"child nutrition\"~10",
+                            "default_operator": "AND",
+                            "use_dis_max": true,
+                            "fields": [
+                                "popular_title",
+                                "official_title",
+                                "short_title",
+                                "nicknames",
+                                "summary",
+                                "keywords",
+                                "text"
+                            ]
+                        }
+                    }
+                }
+            },
+            "explain": true,
+            "track_scores": true,
+            "highlight": {
+                "fields": {
+                    "popular_title": {},
+                    "official_title": {},
+                    "short_title": {},
+                    "nicknames": {},
+                    "summary": {},
+                    "keywords": {},
+                    "text": {}
+                },
+                "order": "score",
+                "fragment_size": 200,
+                "pre_tags": [
+                    "<span style='color:red;'>"
+                ],
+                "post_tags": [
+                    "</span>"
+                ]
+            }
+        },
+        "url": "http://10.60.150.80:3145/congress/bills/_search?from=0&size=1"
+    },
+    "response": {
+        "body": {
+            "took": 16,
+            "timed_out": false,
+            "_shards": {
+                "total": 1,
+                "successful": 1,
+                "failed": 0
+            },
+            "hits": {
+                "total": 14,
+                "max_score": 2.487736,
+                "hits": [
+                    {
+                        "_shard": 0,
+                        "_node": "VPMuDrGIR16DS79pvhsu7g",
+                        "_index": "congress",
+                        "_type": "bills",
+                        "_id": "s3307-111",
+                        "_score": 2.487736,
+                        "fields": {
+                            "official_title": "An original bill to reauthorize child nutrition programs, and for other purposes.",
+                            "last_vote_at": "2010-12-02T20:36:00Z",
+                            "introduced_on": "2010-05-05",
+                            "bill_id": "s3307-111"
+                        },
+                        "highlight": {
+                            "summary": [
+                                "Part II: <span style='color:red;'>Child Nutrition</span> Act of 1966 - (Sec. 421) Amends the <span style='color:red;'>Child Nutrition</span> Act of 1966 to authorize appropriations for FY2010-FY2015 for management information systems and technology infrastructure improvements",
+                                "Amends the <span style='color:red;'>Child Nutrition</span> Act of 1966 to require the Secretary, subject to the availability of appropriations, to award competitive grants to states and, through them, subgrants to LEAs for the creation, maintenance",
+                                "Amends the <span style='color:red;'>Child Nutrition</span> Act of 1966 to allow states to certify children participating in the special supplemental nutrition program for women, infants, and children (WIC program) for up to one year if they",
+                                "under the <span style='color:red;'>Child Nutrition</span> and WIC Reauthorization Act of 2004. (Sec. 205) Establishes requirements regarding the nonfederal contribution required of school food authorities receiving federal reimbursement",
+                                "Amends the <span style='color:red;'>Child Nutrition</span> Act of 1966 to require the Secretary to establish science-based nutrition standards consistent with the most recent Dietary Guidelines for Americans for foods served in schools outside"
+                            ],
+                            "text": [
+                                "wellness in <span style='color:red;'>child</span> care licensing. Sec. 223. Study on <span style='color:red;'>nutrition</span> and wellness quality of <span style='color:red;'>child</span> care settings. Subtitle C--Special Supplemental <span style='color:red;'>Nutrition</span> Program for Women, Infants, and Children Sec. 231. Support",
+                                "of the <span style='color:red;'>Child Nutrition</span> Act of 1966 (42 U.S.C. 1786(g)(5)) is amended by striking \"$5,000,000\" and inserting \"$15,000,000\". (b) WIC Rebate Payments.--Section 17(h)(8) of the <span style='color:red;'>Child Nutrition</span> Act of 1966 (42",
+                                "PART II--<span style='color:red;'>CHILD NUTRITION</span> ACT OF 1966 SEC. 421. TECHNOLOGY INFRASTRUCTURE IMPROVEMENT. Section 7(i)(4) of the <span style='color:red;'>Child Nutrition</span> Act of 1966 (42 U.S.C. 1776(i)(4)) is amended by striking \"2005 through 2009\" and",
+                                "repealed. (b) <span style='color:red;'>Child Nutrition</span> Act of 1966.-- (1) State administrative expenses minimum levels for 2005 through 2007.--Section 7(a)(1) of the <span style='color:red;'>Child Nutrition</span> Act of 1966 (42 U.S.C. 1776(a)(1)) is amended-- (A)",
+                                "reauthorize <span style='color:red;'>child nutrition</span> programs, and for other purposes. Be it enacted by the Senate and House of Representatives of the United States of America in Congress assembled, SECTION 1. SHORT TITLE; TABLE OF"
+                            ],
+                            "official_title": [
+                                "An original bill to reauthorize <span style='color:red;'>child</span> <span style='color:red;'>nutrition</span> programs, and for other purposes."
+                            ]
+                        },
+                        "_explanation": {
+                            "value": 2.4877362,
+                            "description": "max of:",
+                            "details": [
+                                {
+                                    "value": 2.4877362,
+                                    "description": "weight(official_title:\"child nutrition\"~10 in 4099), product of:",
+                                    "details": [
+                                        {
+                                            "value": 0.55799574,
+                                            "description": "queryWeight(official_title:\"child nutrition\"~10), product of:",
+                                            "details": [
+                                                {
+                                                    "value": 14.266696,
+                                                    "description": "idf(official_title: child=542 nutrition=148)"
+                                                },
+                                                {
+                                                    "value": 0.03911177,
+                                                    "description": "queryNorm"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "value": 4.4583426,
+                                            "description": "fieldWeight(official_title:\"child nutrition\" in 4099), product of:",
+                                            "details": [
+                                                {
+                                                    "value": 1,
+                                                    "description": "tf(phraseFreq=1.0)"
+                                                },
+                                                {
+                                                    "value": 14.266696,
+                                                    "description": "idf(official_title: child=542 nutrition=148)"
+                                                },
+                                                {
+                                                    "value": 0.3125,
+                                                    "description": "fieldNorm(field=official_title, doc=4099)"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": 0.30951226,
+                                    "description": "weight(summary:\"child nutrition\"~10 in 4099), product of:",
+                                    "details": [
+                                        {
+                                            "value": 0.47193947,
+                                            "description": "queryWeight(summary:\"child nutrition\"~10), product of:",
+                                            "details": [
+                                                {
+                                                    "value": 12.066431,
+                                                    "description": "idf(summary: child=1738 nutrition=419)"
+                                                },
+                                                {
+                                                    "value": 0.03911177,
+                                                    "description": "queryNorm"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "value": 0.6558304,
+                                            "description": "fieldWeight(summary:\"child nutrition\" in 4099), product of:",
+                                            "details": [
+                                                {
+                                                    "value": 3.4785054,
+                                                    "description": "tf(phraseFreq=12.1)"
+                                                },
+                                                {
+                                                    "value": 12.066431,
+                                                    "description": "idf(summary: child=1738 nutrition=419)"
+                                                },
+                                                {
+                                                    "value": 0.015625,
+                                                    "description": "fieldNorm(field=summary, doc=4099)"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": 0.1775181,
+                                    "description": "weight(text:\"child nutrition\"~10 in 4099), product of:",
+                                    "details": [
+                                        {
+                                            "value": 0.3553991,
+                                            "description": "queryWeight(text:\"child nutrition\"~10), product of:",
+                                            "details": [
+                                                {
+                                                    "value": 9.086756,
+                                                    "description": "idf(text: child=5793 nutrition=2480)"
+                                                },
+                                                {
+                                                    "value": 0.03911177,
+                                                    "description": "queryNorm"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "value": 0.49948946,
+                                            "description": "fieldWeight(text:\"child nutrition\" in 4099), product of:",
+                                            "details": [
+                                                {
+                                                    "value": 9.381368,
+                                                    "description": "tf(phraseFreq=88.01006)"
+                                                },
+                                                {
+                                                    "value": 9.086756,
+                                                    "description": "idf(text: child=5793 nutrition=2480)"
+                                                },
+                                                {
+                                                    "value": 0.005859375,
+                                                    "description": "fieldNorm(field=text, doc=4099)"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "url": "http://10.60.150.80:3145/congress/bills/_search?from=0&size=1"
+    }
+}
