@@ -41,7 +41,7 @@ nutritionBills.filter("introduced_on", "2012-01-01", "gte"); //filter results to
 nutritionBills.filter("introduced_on", "2012-12-31", "lte"); //filter results to bills introduced on or before 12/31/2012
 nutritionBills.filter("enacted_as.law_type", "public"); //filter results to bills that went into public law.
 nutritionBills.fields("official_title", "introduced_on", "last_vote_at");
-nutritionBills.search('"child nutrition"~10');
+nutritionBills.search("\"child nutrition\"~10");
 nutritionBills.highlight("<span style='color:red;'>", "</span>"); //highlight where search results happened.
 nutritionBills.call(buildSuccess("NUTRITION"));
 
