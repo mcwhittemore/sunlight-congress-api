@@ -1,0 +1,39 @@
+{
+    "results": [
+        {
+            "official_title": "An original bill to reauthorize child nutrition programs, and for other purposes.",
+            "last_vote_at": "2010-12-02T20:36:00Z",
+            "introduced_on": "2010-05-05",
+            "bill_id": "s3307-111",
+            "search": {
+                "score": 2.4877322,
+                "type": "bill",
+                "highlight": {
+                    "summary": [
+                        "Part II: <span style='color:red;'>Child Nutrition</span> Act of 1966 - (Sec. 421) Amends the <span style='color:red;'>Child Nutrition</span> Act of 1966 to authorize appropriations for FY2010-FY2015 for management information systems and technology infrastructure improvements",
+                        "Amends the <span style='color:red;'>Child Nutrition</span> Act of 1966 to require the Secretary, subject to the availability of appropriations, to award competitive grants to states and, through them, subgrants to LEAs for the creation, maintenance",
+                        "Amends the <span style='color:red;'>Child Nutrition</span> Act of 1966 to allow states to certify children participating in the special supplemental nutrition program for women, infants, and children (WIC program) for up to one year if they",
+                        "under the <span style='color:red;'>Child Nutrition</span> and WIC Reauthorization Act of 2004. (Sec. 205) Establishes requirements regarding the nonfederal contribution required of school food authorities receiving federal reimbursement",
+                        "Amends the <span style='color:red;'>Child Nutrition</span> Act of 1966 to require the Secretary to establish science-based nutrition standards consistent with the most recent Dietary Guidelines for Americans for foods served in schools outside"
+                    ],
+                    "text": [
+                        "wellness in <span style='color:red;'>child</span> care licensing. Sec. 223. Study on <span style='color:red;'>nutrition</span> and wellness quality of <span style='color:red;'>child</span> care settings. Subtitle C--Special Supplemental <span style='color:red;'>Nutrition</span> Program for Women, Infants, and Children Sec. 231. Support",
+                        "of the <span style='color:red;'>Child Nutrition</span> Act of 1966 (42 U.S.C. 1786(g)(5)) is amended by striking \"$5,000,000\" and inserting \"$15,000,000\". (b) WIC Rebate Payments.--Section 17(h)(8) of the <span style='color:red;'>Child Nutrition</span> Act of 1966 (42",
+                        "PART II--<span style='color:red;'>CHILD NUTRITION</span> ACT OF 1966 SEC. 421. TECHNOLOGY INFRASTRUCTURE IMPROVEMENT. Section 7(i)(4) of the <span style='color:red;'>Child Nutrition</span> Act of 1966 (42 U.S.C. 1776(i)(4)) is amended by striking \"2005 through 2009\" and",
+                        "repealed. (b) <span style='color:red;'>Child Nutrition</span> Act of 1966.-- (1) State administrative expenses minimum levels for 2005 through 2007.--Section 7(a)(1) of the <span style='color:red;'>Child Nutrition</span> Act of 1966 (42 U.S.C. 1776(a)(1)) is amended-- (A)",
+                        "reauthorize <span style='color:red;'>child nutrition</span> programs, and for other purposes. Be it enacted by the Senate and House of Representatives of the United States of America in Congress assembled, SECTION 1. SHORT TITLE; TABLE OF"
+                    ],
+                    "official_title": [
+                        "An original bill to reauthorize <span style='color:red;'>child</span> <span style='color:red;'>nutrition</span> programs, and for other purposes."
+                    ]
+                }
+            }
+        }
+    ],
+    "count": 14,
+    "page": {
+        "count": 1,
+        "per_page": 1,
+        "page": 1
+    }
+}
