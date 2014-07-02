@@ -186,12 +186,6 @@ Provides control over the search feature. On endpoints ending in /search, it che
 
 * q: what to search for.
 
-#### setKey(key)
-
-Sets the API key for this endpoint object only.
-
-	api.votes().setKey("SOMEAPIKEY");
-
 ### Full Text Search Endpoints
 
 Endpoints Included
