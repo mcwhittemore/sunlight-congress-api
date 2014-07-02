@@ -17,7 +17,10 @@ var buildSuccess = function(title){
 }
 
 // INIT THE MASTER MODULE
-api.init(config.apikey);
+api.init({
+	key: config.apikey,
+	url: "https://congress.api.sunlightfoundation.com/",
+});
 
 
 // CREATE A VOTES MODULE, DEFINE IT, CALL IT
