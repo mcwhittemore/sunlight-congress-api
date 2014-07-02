@@ -22,6 +22,9 @@ api.init({
 	url: "https://congress.api.sunlightfoundation.com/",
 });
 
+//Hit the status endpoint
+api.status(buildSuccess("STATUS"));
+
 
 // CREATE A VOTES MODULE, DEFINE IT, CALL IT
 // EXAMPLE RESPONSE: ./results/Votes.json
