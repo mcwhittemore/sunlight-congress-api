@@ -29,9 +29,16 @@ A small demo is provided. After creating a config.js file, run `node run.js` in 
 
 #### init(apikey)
 
-Sets the apikey for all endpoint modules created following.
+Sets the apikey for all endpoint modules created following. Also allows a user to direct requests to a custom server.
 
 	api.init("SOMEAPIKEY");
+
+	OR
+
+	api.init({
+		key: "SOMEAPIKEY",
+		url: "https://congress.api.sunlightfoundation.com/"
+	});
 
 #### clone(obj)
 
