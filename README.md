@@ -70,7 +70,7 @@ There are currently 10 endpoints to the Sunlight Congress API.
 
 #### call(success, [failure])
 
-Issues a GET request to the API. Async calls success on success and failure on failure. If failure is not defined, a default console.log is used.
+Issues a GET request to the API. Async calls success on success and failure on failure.
 
 	api.votes().call(function(data){ 
 		console.log(data.results.length);
@@ -78,6 +78,14 @@ Issues a GET request to the API. Async calls success on success and failure on f
 
 * success: callback function on a successful call.
 * failure: callback function on a failed call. Defaults to console.log.
+
+If either `success` or `failure` aren't defined, `.call()` will return a promise, which will be resolved or rejected as appropriate. 
+
+```js
+  api.votes().call().then(function(data){ 
+    console.log(data.results.length);
+  });
+```
 
 #### explain()
 
@@ -134,6 +142,8 @@ Increments page by 1 and then issues a call. If page has not been set it will in
 
 * success: callback function on a successful call.
 * failure: callback function on a failed call. Defaults to console.log.
+
+`.next()` will return the result of the underlying `.call()` method. This means if `success` or `failure` isn't defined, a promise will be returned.
 
 #### order(field, [direction]) 
 
