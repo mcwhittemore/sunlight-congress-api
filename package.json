@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "author": "Matthew Chase Whittemore <mcwhittemore@gmail.com>",
   "description": "A simple wrapper for the Sunlight Congress API from the Sunlight Foundation",
-  "contributors": [ 
+  "contributors": [
     {
       "name": "Matthew Chase Whittemore",
       "email": "mcwhittemore@gmail.com"
-    } 
+    }
   ],
   "main": "./lib/main",
   "repository": {
@@ -21,10 +21,10 @@
     "sunlight labs",
     "open government"
   ],
-  "dependencies" : {
+  "dependencies": {
+    "es6-promise": "^1.0.0"
   },
-  "bundledDependencies": [
-  ],  
+  "bundledDependencies": [],
   "license": "MIT",
   "engines": {
     "node": ">=0.6"
