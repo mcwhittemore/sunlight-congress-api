@@ -1,6 +1,6 @@
 {
   "name": "sunlight-congress-api",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Matthew Chase Whittemore <mcwhittemore@gmail.com>",
   "description": "A simple wrapper for the Sunlight Congress API from the Sunlight Foundation",
   "contributors": [
