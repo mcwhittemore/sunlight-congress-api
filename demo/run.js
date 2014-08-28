@@ -9,11 +9,11 @@ if(config == undefined || config.apikey == undefined || config.apikey == ""){
 // THIS FUNCTION WILL HELP US KNOW WHICH IS WHICH BY CREATING
 // A STANDARD HEADER ROW SUCCESS FUNCTION WITH A LABEL
 var buildSuccess = function(title){
-	return function(data){
-		console.log("\n**************************** "+title+" ***********************************");
-		console.log(data);
-		console.log();
-	}
+	 return function(data){
+	 	console.log("\n**************************** "+title+" ***********************************");
+	 	console.log(data);
+	 	console.log();
+	 }
 }
 
 // INIT THE MASTER MODULE
@@ -24,6 +24,8 @@ api.init({
 
 //Hit the status endpoint
 api.status(buildSuccess("STATUS"));
+
+api.amendments().call(buildSuccess("AMENDEMNTS"));
 
 
 // CREATE A VOTES MODULE, DEFINE IT, CALL IT
