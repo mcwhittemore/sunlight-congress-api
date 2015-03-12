@@ -81,6 +81,15 @@ for(var i=1; i<5; i++){
 	committees.next(buildSuccess("COMMITTEESS PAGE "+i));
 }
 
+//testing that the lat and long get added to request and called
+
+api.legislatorsLocate()
+  .addCoordinates({latitude: 27.979951399999997, longitude: -82.5349232})
+  .call(buildSuccess("Legislators locate by coords"));
+
+api.legislatorsLocate()
+  .addZipCode(60601)
+  .call(buildSuccess("Legislators locate by zip"));
 
 // ALL SAME EXAMPLES, WITH PROMISES
 //
